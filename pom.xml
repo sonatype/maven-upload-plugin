@@ -8,7 +8,7 @@
   </parent>
 
   <artifactId>maven-upload-plugin</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
   
   <properties>
@@ -41,10 +41,4 @@
       <version>${httpclient-version}</version>
     </dependency>
   </dependencies>
-
-  <scm>
-    <connection>scm:svn:http://svn.sonatype.org/plugins/tags/maven-upload-plugin-0.0.1</connection>
-    <developerConnection>scm:svn:https://svn.sonatype.org/plugins/tags/maven-upload-plugin-0.0.1</developerConnection>
-    <url>http://svn.sonatype.org/plugins/tags/maven-upload-plugin-0.0.1</url>
-  </scm>
 </project>

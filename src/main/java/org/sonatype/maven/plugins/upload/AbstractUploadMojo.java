@@ -1,7 +1,6 @@
 package org.sonatype.maven.plugins.upload;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +11,7 @@ import org.apache.http.client.CredentialsProvider;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.ContentType;
-import org.apache.http.entity.InputStreamEntity;
+import org.apache.http.entity.FileEntity;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -105,7 +104,7 @@ public abstract class AbstractUploadMojo
                 contentType = ContentType.APPLICATION_XML;
             }
 
-            putRequest.setEntity( new InputStreamEntity( new FileInputStream( file ), contentType ) );
+            putRequest.setEntity( new FileEntity( file , contentType ) );
 
             response = client.execute(putRequest);
 

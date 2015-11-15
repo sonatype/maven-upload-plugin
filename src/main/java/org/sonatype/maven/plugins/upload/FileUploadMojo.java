@@ -2,7 +2,7 @@ package org.sonatype.maven.plugins.upload;
 
 import java.io.File;
 
-import org.apache.commons.httpclient.HttpClient;
+import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.maven.artifact.repository.ArtifactRepository;
 import org.apache.maven.plugin.MojoExecutionException;
 import org.apache.maven.plugin.MojoFailureException;
@@ -35,7 +35,7 @@ public class FileUploadMojo
 
         ArtifactRepository repository = getArtifactRepository();
 
-        HttpClient client = getHttpClient( repository );
+        CloseableHttpClient client = getHttpClient( repository );
 
         String url = getTargetUrl( repository );
 

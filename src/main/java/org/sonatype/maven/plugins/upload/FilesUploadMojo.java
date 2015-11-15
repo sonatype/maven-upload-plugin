@@ -16,16 +16,16 @@ import org.codehaus.plexus.util.DirectoryScanner;
 public class FilesUploadMojo
     extends AbstractUploadMojo
 {
-    /** @parameter default-value="${project.basedir}" */
+    /** @parameter expression="${upload.basedir}" default-value="${project.basedir}" */
     private File basedir;
 
-    /** @parameter */
+    /** @parameter expression="${upload.includes}" */
     private String[] includes;
 
-    /** @parameter */
+    /** @parameter expression="${upload.excludes}" */
     private String[] excludes;
 
-    /** @parameter */
+    /** @parameter expression="${upload.repositoryBasePath}" */
     private String repositoryBasepath;
 
     public void execute()

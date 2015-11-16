@@ -15,10 +15,10 @@ import org.apache.maven.plugin.MojoFailureException;
 public class FileUploadMojo
     extends AbstractUploadMojo
 {
-    /** @parameter expression="${upload.file}" */
+    /** @parameter property="upload.file" */
     private File file;
 
-    /** @parameter expression="${upload.repositoryPath}" */
+    /** @parameter property="upload.repositoryPath" */
     private String repositoryPath;
 
     /** @parameter default-value="false" */

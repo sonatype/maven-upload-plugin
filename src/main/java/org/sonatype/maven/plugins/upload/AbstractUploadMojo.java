@@ -35,13 +35,13 @@ public abstract class AbstractUploadMojo
     /** @component */
     protected ArtifactRepositoryLayout repositoryLayout;
 
-    /** @parameter expression="${session}" */
+    /** @parameter property="session" */
     protected MavenSession session;
 
-    /** @parameter expression="${upload.serverId}" */
+    /** @parameter property="upload.serverId" */
     protected String serverId;
 
-    /** @parameter expression="${upload.repositoryUrl}" */
+    /** @parameter property="upload.repositoryUrl" */
     protected String repositoryUrl;
 
     protected CloseableHttpClient getHttpClient( ArtifactRepository repository )
